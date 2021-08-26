@@ -375,3 +375,51 @@ button {
   margin-left: -12px;
   margin-top: 8px;
 }
+/* Testimonial */
+
+#testimonial {
+  background-color: var(--color-dark-white);
+}
+.testimonial {
+}
+
+.testimonials {
+  margin: 40px 0;
+}
+.testimonial {
+  display: flex;
+  padding: 14px 0;
+}
+.testimonial__avata {
+  border-radius: 50%;
+}
+.testimonial a {
+  color: black;
+}
+.testimonial__speech-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  margin: 0 10px;
+}
+.name {
+  color: var(--color-pink);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-orange);
+}
+.contact__title {
+  font-size: var(--font-medium);
+}
+.contact__email {
+  font-size: var(--font-small);
+  margin-bottom: 20px;
+}
+.contact__links {
+  font-size: 30px;
+}
