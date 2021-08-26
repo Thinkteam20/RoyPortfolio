@@ -28,8 +28,10 @@
   --weight-regular: 400;
 
   /* Size */
-  /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Typography */
@@ -45,7 +47,7 @@ h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 h3 {
@@ -150,4 +152,74 @@ button {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+
+/* Section common  */
+.section {
+  padding: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About ME */
+
+.about__major {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+.major__icon {
+  width: 140px;
+  height: 140px;
+  /* background-color: yellow; */
+  font-size: 50px;
+  line-height: 140px;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: colorblue;
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon i:hover {
+  color: cornflowerblue;
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+.exp__logo {
+  width: 70px;
+  height: 70px;
+}
+
+.exp__description {
+  margin: 0 16px;
+  text-align: left;
+}
+.exp__name {
+  margin: 0 16px;
+  font-size: var(--font-small);
+}
+
+.exp__name,
+.exp__description {
+  color: var(--color-light-grey);
 }
