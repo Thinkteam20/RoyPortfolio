@@ -45,3 +45,18 @@ const homeHeight = home.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+// Arrow top
+const arrowBtn = document.querySelector(".arrow-up");
+
+// console.log(arrowBtn);
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 20) {
+    arrowBtn.classList.add("arrow-showup");
+    arrowBtn.classList.remove("arrow-up");
+  }
+});
+
+arrowBtn.addEventListener("click", (event) => {
+  scrollIntoView("#home");
+});

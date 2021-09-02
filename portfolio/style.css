@@ -487,3 +487,20 @@ button {
     height: 80px;
   }
 }
+
+/* Arrow up button */
+.arrow-up {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.arrow-up-button {
+  font-size: var(--font-large);
+}
+.arrow-showup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: var(--color-black);
+}
