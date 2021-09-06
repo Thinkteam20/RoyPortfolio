@@ -21,7 +21,15 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// navbar toggle button
+const toggleBtn = document.querySelector(".navbar__toggle__btn");
+
+toggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // contact button Scroll

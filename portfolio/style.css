@@ -170,6 +170,9 @@ button {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
 
 /* Section common  */
 .section {
@@ -305,6 +308,7 @@ button {
   border-radius: var(--size-border-radius);
   font-size: var(--font-small);
   padding: 10px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -331,9 +335,9 @@ button {
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -388,7 +392,7 @@ button {
   transition: all var(--animation-duration) ease-in;
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -464,26 +468,57 @@ button {
 /* RESPONSIVE */
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 18px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .navbar__toggle__btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    padding-top: 20px;
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__major {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .category__btn {
+    width: 100%;
+    margin: 4px 0;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
@@ -491,9 +526,23 @@ button {
   .project {
     flex-grow: 1;
   }
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
   .testimonial__avata {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+  .testimonial__avata:nth-child(even),
+  .testimonial__avata:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+  .arrow-up-button {
   }
 }
 
