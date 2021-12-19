@@ -55,13 +55,15 @@ window.addEventListener("scroll", () => {
 });
 
 // Arrow top
-const arrowBtn = document.querySelector(".arrow-up");
 
-// console.log(arrowBtn);
+const arrowBtn = document.querySelector(".arrow-up");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 20) {
+  if (window.scrollY > homeHeight / 2) {
     arrowBtn.classList.add("arrow-showup");
     arrowBtn.classList.remove("arrow-up");
+  } else {
+    arrowBtn.classList.remove("arrow-showup");
+    arrowBtn.classList.add("arrow-up");
   }
 });
 
@@ -75,7 +77,6 @@ const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
 
-// console.log(workBtnContainer);
 workBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
